@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.todo.api.infrastructure.repository.mapper.TodoMapper">
+    <insert id="insert" parameterType="com.example.todo.api.infrastructure.repository.entity.TodoEntity">
+        INSERT INTO TODO (
+            title,
+            detail,
+            deadline,
+            is_completed,
+            register_date,
+            update_date
+        ) values (
+            #{title},
+            #{detail},
+            #{deadline},
+            #{isCompleted},
+            now(),
+            now()
+        )
+    </insert>
+</mapper>
