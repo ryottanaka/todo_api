@@ -6,8 +6,10 @@ import lombok.RequiredArgsConstructor;
 @Getter
 @RequiredArgsConstructor
 public enum IsCompleted {
-    UN_COMPLETED("0"),
-    COMPLETED("1");
+    INCOMPLETE("incomplete", "0"),
+    COMPLETED("completed", "1");
 
-    private final String isCompleted;
+    private final String value;
+    private final String flag;
+
 }

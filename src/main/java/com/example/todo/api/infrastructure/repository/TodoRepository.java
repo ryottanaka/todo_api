@@ -18,7 +18,7 @@ public class TodoRepository {
                 todo.getTitle(),
                 todo.getDetail().orElse(null),
                 todo.getDeadline().orElse(null),
-                IsCompleted.UN_COMPLETED.getIsCompleted(),
+                IsCompleted.INCOMPLETE.getFlag(),
                 null,
                 null
         ));
