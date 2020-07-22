@@ -10,4 +10,6 @@ public interface TodoMapper {
     void insert(TodoEntity entity);
 
     List<TodoEntity> getTodoList();
+
+    int update(TodoEntity entity);
 }

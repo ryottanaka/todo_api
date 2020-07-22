@@ -32,6 +32,7 @@ public class TodoRepository {
         List<TodoEntity> entityList = mapper.getTodoList();
         return entityList.stream()
                 .map(entity -> new TodoModel(
+                        entity.getId(),
                         entity.getTitle(),
                         entity.getDetail(),
                         entity.getDeadline(),
@@ -39,5 +40,17 @@ public class TodoRepository {
                         entity.getRegisterDate(),
                         entity.getUpdateDate()
                 )).collect(Collectors.toList());
+    }
+
+    public int update(TodoModel todo) {
+        return mapper.update(new TodoEntity(
+                todo.getId(),
+                todo.getTitle(),
+                todo.getDetail(),
+                todo.getDeadline(),
+                todo.getIsCompleted().getFlag(),
+                todo.getRegisterDate(),
+                todo.getUpdateDate()
+        ));
     }
 }

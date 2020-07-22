@@ -20,4 +20,8 @@ public class TodoService {
     public List<TodoModel> getTodoList() {
         return repository.getTodoList();
     }
+
+    public void update(TodoModel todo) {
+        repository.update(todo);
+    }
 }
