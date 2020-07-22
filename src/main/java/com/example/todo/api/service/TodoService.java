@@ -24,4 +24,8 @@ public class TodoService {
     public void update(TodoModel todo) {
         repository.update(todo);
     }
+
+    public void delete(Integer id) {
+        repository.delete(id);
+    }
 }

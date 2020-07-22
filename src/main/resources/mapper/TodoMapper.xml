@@ -39,4 +39,11 @@
         WHERE
             id = #{id}
     </update>
+
+    <delete id="delete">
+        DELETE FROM
+            TODO
+        WHERE
+            id = #{id}
+    </delete>
 </mapper>

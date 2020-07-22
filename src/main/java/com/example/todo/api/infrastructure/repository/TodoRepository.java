@@ -53,4 +53,8 @@ public class TodoRepository {
                 todo.getUpdateDate()
         ));
     }
+
+    public int delete(Integer id) {
+        return mapper.delete(id);
+    }
 }

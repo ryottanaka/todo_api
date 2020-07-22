@@ -12,4 +12,6 @@ public interface TodoMapper {
     List<TodoEntity> getTodoList();
 
     int update(TodoEntity entity);
+
+    int delete(Integer id);
 }

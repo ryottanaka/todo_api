@@ -44,4 +44,10 @@ public class TodoController {
         service.update(TodoModel.create(id, request));
         return new OkResponse();
     }
+
+    @DeleteMapping("/todo/delete")
+    public OkResponse delete (@RequestParam Integer id) {
+        service.delete(id);
+        return new OkResponse();
+    }
 }
