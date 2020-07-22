@@ -19,4 +19,31 @@
             now()
         )
     </insert>
+
+    <select id="getTodoList" resultType="com.example.todo.api.infrastructure.repository.entity.TodoEntity">
+        SELECT
+            *
+        FROM
+            TODO
+    </select>
+
+    <update id="update" parameterType="com.example.todo.api.infrastructure.repository.entity.TodoEntity">
+        UPDATE
+            TODO
+        SET
+            title = #{title},
+            detail = #{detail},
+            deadline = #{deadline},
+            is_completed = #{isCompleted},
+            update_date = now()
+        WHERE
+            id = #{id}
+    </update>
+
+    <delete id="delete">
+        DELETE FROM
+            TODO
+        WHERE
+            id = #{id}
+    </delete>
 </mapper>
