@@ -19,4 +19,11 @@
             now()
         )
     </insert>
+
+    <select id="getTodoList" resultType="com.example.todo.api.infrastructure.repository.entity.TodoEntity">
+        SELECT
+            *
+        FROM
+            TODO
+    </select>
 </mapper>
