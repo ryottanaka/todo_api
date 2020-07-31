@@ -4,6 +4,7 @@ import com.example.todo.api.controller.resourses.request.TodoNewRequest;
 import lombok.Value;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Optional;
 
 @Value
@@ -23,7 +24,9 @@ public class InsertTodoModel {
         return new InsertTodoModel(
                 request.getTitle(),
                 request.getDetail(),
-                request.getDeadline()
+               null
+               //LocalDate.parse(request.getDeadline(),DateTimeFormatter.ofPattern("yyyy/MM/dd"))
+
         );
     }
 }
