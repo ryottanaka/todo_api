@@ -10,3 +10,6 @@ CREATE TABLE TODO (
 	REGISTER_DATE DATE not null,
 	UPDATE_DATE DATE not null
 );
+
+# openapi
+https://ryottanaka.github.io/pagesTest/Swagger%20UI.html
